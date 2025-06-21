@@ -13,7 +13,7 @@ function ManagerLogin() {
     e.preventDefault();
     setError("");
     try {
-      const res = await axios.post("http://127.0.0.1:8000/manager/login", form);
+      const res = await axios.post("https://dpdzero-feedback.onrender.com/manager/login", form);
       const manager = res.data.manager;
       localStorage.setItem("manager", JSON.stringify(manager));
       navigate("/manager/dashboard");
