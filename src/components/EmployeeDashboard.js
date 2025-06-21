@@ -16,7 +16,7 @@ function EmployeeDashboard() {
 
   const fetchFeedbacks = async (id) => {
     try {
-      const res = await axios.get(`http://127.0.0.1:8000/employee/feedbacks/${id}`);
+      const res = await axios.get(`https://dpdzero-feedback.onrender.com/employee/feedbacks/${id}`);
       setFeedbacks(res.data);
     } catch (err) {
       console.error("Error fetching feedbacks:", err);
@@ -25,7 +25,7 @@ function EmployeeDashboard() {
 
   const handleAcknowledge = async (feedbackId) => {
     try {
-      await axios.patch(`http://127.0.0.1:8000/employee/feedbacks/${feedbackId}/ack`);
+      await axios.patch(`https://dpdzero-feedback.onrender.com/employee/feedbacks/${feedbackId}/ack`);
       setFeedbacks((prev) =>
         prev.map((f) =>
           f.id === feedbackId ? { ...f, acknowledge: true } : f
