@@ -106,7 +106,15 @@ CREATE TABLE feedback (
   acknowledge BOOLEAN DEFAULT FALSE
 );
 ```
-![Alt text](https://github.com/vik802207/credit-loan-system/blob/master/img/Screenshot%20(338).png?raw=true)
+![Alt text](https://github.com/vik802207/DpDZero-Feedback/blob/main/img/Screenshot%20(522).png?raw=true)
+![Alt text](https://github.com/vik802207/DpDZero-Feedback/blob/main/img/Screenshot%20(523).png?raw=true)
+![Alt text](https://github.com/vik802207/DpDZero-Feedback/blob/main/img/Screenshot%20(524).png?raw=true)
+![Alt text](https://github.com/vik802207/DpDZero-Feedback/blob/main/img/Screenshot%20(525).png?raw=true)
+![Alt text](https://github.com/vik802207/DpDZero-Feedback/blob/main/img/Screenshot%20(526).png?raw=true)
+![Alt text](https://github.com/vik802207/DpDZero-Feedback/blob/main/img/Screenshot%20(527).png?raw=true)
+![Alt text](https://github.com/vik802207/DpDZero-Feedback/blob/main/img/Screenshot%20(528).png?raw=true)
+![Alt text](https://github.com/vik802207/DpDZero-Feedback/blob/main/img/Screenshot%20(522).png?raw=true)
+![Alt text](https://github.com/vik802207/DpDZero-Feedback/blob/main/img/Screenshot%20(530).png?raw=true)
 
 
 ## 🤝 Contributing
