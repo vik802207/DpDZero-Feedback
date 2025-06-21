@@ -15,7 +15,7 @@ function ManagerSignup() {
     setSuccess("");
 
     try {
-      const res = await axios.post("http://127.0.0.1:8000/manager/signup", form);
+      const res = await axios.post("https://dpdzero-feedback.onrender.com/manager/signup", form);
       setSuccess("Signup successful. Redirecting to login...");
       setTimeout(() => navigate("/manager/login"), 2000);
     } catch (err) {
