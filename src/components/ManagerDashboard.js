@@ -27,7 +27,7 @@ export default function ManagerDashboard() {
 
   const fetchEmployees = async () => {
     try {
-      const res = await axios.get("http://127.0.0.1:8000/manager/team");
+      const res = await axios.get("https://dpdzero-feedback.onrender.com/manager/team");
       setEmployees(res.data);
     } catch (err) {
       console.error("Failed to fetch employees", err);
@@ -36,7 +36,7 @@ export default function ManagerDashboard() {
 
   const fetchFeedbacks = async (managerId) => {
     try {
-      const res = await axios.get("http://127.0.0.1:8000/feedback");
+      const res = await axios.get("https://dpdzero-feedback.onrender.com/feedback");
       const filtered = res.data.filter((f) => f.from_manager === managerId);
       setFeedbacks(filtered);
     } catch (err) {
@@ -81,10 +81,10 @@ export default function ManagerDashboard() {
 
     try {
       if (isEditing) {
-        await axios.patch(`http://127.0.0.1:8000/feedback/${editId}`, payload);
+        await axios.patch(`https://dpdzero-feedback.onrender.com/feedback/${editId}`, payload);
         alert("Feedback updated!");
       } else {
-        await axios.post("http://127.0.0.1:8000/feedback", payload);
+        await axios.post("https://dpdzero-feedback.onrender.com/feedback", payload);
         alert("Feedback submitted!");
       }
       handleCloseModal();
