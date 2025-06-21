@@ -19,7 +19,7 @@ function EmployeeSignup() {
     setSuccess("");
 
     try {
-      const res = await axios.post("http://localhost:8000/employee/signup", form);
+      const res = await axios.post("https://dpdzero-feedback.onrender.com/employee/signup", form);
       setSuccess("Signup successful. Redirecting to login...");
       setTimeout(() => navigate("/employee/login"), 2000);
     } catch (err) {
