@@ -1,0 +1,121 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+}
+
+.employee-dashboard {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.dashboard-title {
+  font-size: 32px;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.dashboard-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #5b21b6;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 20px;
+}
+
+.no-feedback {
+  font-size: 16px;
+  color: #999;
+  text-align: center;
+}
+
+.feedback-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.feedback-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feedback-card:hover {
+  transform: translateY(-4px);
+}
+
+.sentiment-tag {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+  text-transform: capitalize;
+}
+
+.sentiment-tag.positive {
+  background-color: #e0f7e9;
+  color: #2e7d32;
+}
+
+.sentiment-tag.neutral {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.sentiment-tag.negative {
+  background-color: #fdecea;
+  color: #c62828;
+}
+
+.ack {
+  font-weight: bold;
+}
+
+.acknowledged {
+  color: #2e7d32;
+}
+
+.pending {
+  color: #d17b00;
+}
+
+.acknowledge-btn {
+  margin-top: 10px;
+  background-color: #5b21b6;
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+  align-self: flex-start;
+}
+
+.acknowledge-btn:hover {
+  background-color: #4c1d95;
+}
+
+.loading-text {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 18px;
+  color: #888;
+}

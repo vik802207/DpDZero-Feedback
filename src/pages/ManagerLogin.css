@@ -1,0 +1,153 @@
+.login-page {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.login-left {
+  flex: 1;
+  padding: 60px 80px;
+  background: #fff;
+}
+
+.brand {
+  color: #5b21b6;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+h3 {
+  margin-top: 30px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.sub-text {
+  margin-bottom: 30px;
+  color: #555;
+  font-size: 14px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+    color: black;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"],
+.password-input-wrapper input {
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  user-select: none;
+}
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  font-size: 14px;
+  flex-wrap: nowrap;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  transform: scale(1.2);
+  margin: 0;
+}
+
+
+.primary-btn {
+  background-color: #5b21b6;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background-color: #4c1d95;
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  gap: 8px;
+}
+
+.google-btn:hover {
+  background-color: #f9f9f9;
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: #5b21b6;
+  text-decoration: none;
+}
+
+.error-msg {
+  color: red;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.login-right {
+  flex: 1;
+  background-color: #ede9fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-right img {
+  width: 80%;
+  max-width: 500px;
+}
