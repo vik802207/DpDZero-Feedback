@@ -53,6 +53,10 @@ feedback-system/
 │ └── public/
 └── README.md
 ```
+---
+## 📽️ Demo Video
+
+👉 [Watch Demo](https://drive.google.com/file/d/1t1Wz89fRkHPRRARQAf4IwIJ5_XyGOXzk/view?usp=drive_link)
 
 ---
 
@@ -106,6 +110,8 @@ CREATE TABLE feedback (
   acknowledge BOOLEAN DEFAULT FALSE
 );
 ```
+## Screenshots
+---
 ![Alt text](https://github.com/vik802207/DpDZero-Feedback/blob/main/img/Screenshot%20(522).png?raw=true)
 ![Alt text](https://github.com/vik802207/DpDZero-Feedback/blob/main/img/Screenshot%20(523).png?raw=true)
 ![Alt text](https://github.com/vik802207/DpDZero-Feedback/blob/main/img/Screenshot%20(524).png?raw=true)
@@ -113,8 +119,14 @@ CREATE TABLE feedback (
 ![Alt text](https://github.com/vik802207/DpDZero-Feedback/blob/main/img/Screenshot%20(526).png?raw=true)
 ![Alt text](https://github.com/vik802207/DpDZero-Feedback/blob/main/img/Screenshot%20(527).png?raw=true)
 ![Alt text](https://github.com/vik802207/DpDZero-Feedback/blob/main/img/Screenshot%20(528).png?raw=true)
-![Alt text](https://github.com/vik802207/DpDZero-Feedback/blob/main/img/Screenshot%20(522).png?raw=true)
+![Alt text](https://github.com/vik802207/DpDZero-Feedback/blob/main/img/Screenshot%20(529).png?raw=true)
 ![Alt text](https://github.com/vik802207/DpDZero-Feedback/blob/main/img/Screenshot%20(530).png?raw=true)
+## Database Supabase
+---
+![Alt text](https://github.com/vik802207/DpDZero-Feedback/blob/main/img/Screenshot%20(531).png?raw=true)
+![Alt text](https://github.com/vik802207/DpDZero-Feedback/blob/main/img/Screenshot%20(532).png?raw=true)
+![Alt text](https://github.com/vik802207/DpDZero-Feedback/blob/main/img/Screenshot%20(533).png?raw=true)
+
 
 
 ## 🤝 Contributing
@@ -123,7 +135,7 @@ Pull requests are welcome. For major changes, open an issue first to discuss wha
 ## 📜 License
 This project is licensed under the MIT License.
 ## 🔗 Live Demo
-👉 ChatGPT Clone Live
+👉 Project is Live
 ## [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://dpdzeroassignment.vercel.app/)
 
 ## 👨‍💻 Author
