@@ -1,70 +1,125 @@
-# Getting Started with Create React App
+# 🧠 Feedback Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A role-based feedback platform where **Managers** can give feedback to **Employees**, and employees can view and acknowledge feedback.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🔧 Tech Stack
 
-### `npm start`
+| Layer        | Tech                              |
+|--------------|-----------------------------------|
+| Frontend     | React (with Axios & Tailwind/CSS) |
+| Backend      | FastAPI                           |
+| Database     | Supabase (PostgreSQL)             |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Features
 
-### `npm test`
+### 🧑‍💼 Manager
+- Signup / Login
+- View assigned employees
+- Give feedback (with strengths, improvements, sentiment)
+- View feedback history and edit existing feedback
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 👩‍💼 Employee
+- Signup / Login
+- View received feedbacks
+- Acknowledge feedbacks
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📁 Project Structure
+```bash
+feedback-system/
+├── backend/
+│ ├── main.py
+│ ├── config.py
+│ └── routes/
+│ ├── manager.py
+│ ├── employee.py
+│ └── feedback.py
+├── frontend/
+│ ├── src/
+│ │ ├── pages/
+│ │ │ ├── HomePage.jsx
+│ │ │ ├── ManagerLogin.jsx
+│ │ │ ├── ManagerSignup.jsx
+│ │ │ ├── ManagerDashboard.jsx
+│ │ │ ├── EmployeeLogin.jsx
+│ │ │ ├── EmployeeSignup.jsx
+│ │ │ └── EmployeeDashboard.jsx
+│ │ └── App.js
+│ └── public/
+└── README.md
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ⚙️ Setup Instructions
 
-### `npm run eject`
+### 1. 🔌 Backend (FastAPI)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+cd backend
+pip install fastapi uvicorn httpx python-dotenv
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Set your Supabase keys in .env
+touch .env
+SUPABASE_URL = "https://jxjcjmarroyvxnfafxiq.supabase.co"
+SUPABASE_API_KEY = "***********.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp4amNqbWFycm95dnhuZmFmeGlxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAzMDA5MzcsImV4cCI6MjA2NTg3NjkzN30.********"
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Run the backend:
+python -m uvicorn main:app --reload
+```
+### 2. 🌐 Frontend (React)
+```bash
+cd frontend
+npm install
+npm start
+```
+### Supabase Tables
+``` bash
+1. manager
+CREATE TABLE manager (
+  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  name TEXT,
+  email TEXT UNIQUE,
+  password TEXT
+);
+2. employee
+CREATE TABLE employee (
+  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  name TEXT,
+  email TEXT UNIQUE,
+  password TEXT,
+  manager_id UUID REFERENCES manager(id)
+);
+3. feedback
+CREATE TABLE feedback (
+  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  from_manager UUID REFERENCES manager(id),
+  to_employee UUID REFERENCES employee(id),
+  strengths TEXT,
+  improvements TEXT,
+  sentiment TEXT CHECK (sentiment IN ('positive', 'neutral', 'negative')),
+  acknowledge BOOLEAN DEFAULT FALSE
+);
+```
+![Alt text](https://github.com/vik802207/credit-loan-system/blob/master/img/Screenshot%20(338).png?raw=true)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## 🤝 Contributing
+Pull requests are welcome. For major changes, open an issue first to discuss what you would like to change.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📜 License
+This project is licensed under the MIT License.
+## 🔗 Live Demo
+👉 ChatGPT Clone Live
+## [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://dpdzeroassignment.vercel.app/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 👨‍💻 Author
+Developed by Vikash Gupta
+📧 Contact: vikashg802207@gmail.com
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
