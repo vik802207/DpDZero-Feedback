@@ -13,7 +13,7 @@ function EmployeeLogin() {
     setError("");
 
     try {
-      const res = await axios.post("http://127.0.0.1:8000/employee/login", form);
+      const res = await axios.post("https://dpdzero-feedback.onrender.com/employee/login", form);
       const employee = res.data.employee;
       localStorage.setItem("employee", JSON.stringify(employee));
       navigate("/employee/dashboard");
